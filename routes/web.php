@@ -22,3 +22,4 @@ Route :: get('/firstpo/display', [FirstPOController::class, 'display']);
 
 Route :: get('/courses', [FirstPOController::class, 'Show']);
 Route :: get('/invoking', Invokable123Controller::class);
+Route :: get('/invoking1', [Invokable123Controller::class, '__invoke1']);
