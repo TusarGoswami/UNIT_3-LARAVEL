@@ -7,6 +7,7 @@ use App\Http\Controllers\ResourcePOController;
 use App\Http\Controllers\APIPOController;
 use App\Http\Controllers\MiddlewarePOController;
 use App\Http\Middleware\MiddlewarePO;
+use App\Http\Middleware\GlobalPOMiddleware;
 
 
 Route::get('/', function () {
@@ -39,5 +40,5 @@ Route :: get('/invoking', Invokable123Controller::class);
 Route :: get('/invoking1/{id}', [Invokable123Controller::class, '__invoke1']);
 Route :: resource('/abc', ResourcePOController::class);
 Route :: apiResource('xyz', APIPOController::class);
-Route :: get('/firstmiddleware', [MiddlewarePOController::class, 'show'])->middleware('checkingage');
-    
+// Route :: get('/firstmiddleware', [MiddlewarePOController::class, 'show'])->middleware('checkingage');
+Route :: get('/firstmiddleware', [MiddlewarePOController::class, 'show']);

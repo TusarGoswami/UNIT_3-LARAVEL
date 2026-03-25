@@ -3,6 +3,8 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
+use App\Http\Middleware\MiddlewarePO;
+use App\Http\Middleware\GlobalPOMiddleware;
 
 
 return Application::configure(basePath: dirname(__DIR__))
@@ -13,10 +15,15 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware): void {
         //FFirst step is to register middleware in this function
-        $middleware->alias(
-        [
-            'checkingage' => \App\Http\Middleware\MiddlewarePO::class,
-        ]
+        // $middleware->alias(
+        // [
+        //     'checkingage' => \App\Http\Middleware\MiddlewarePO::class,
+        // ]
+        // );
+        
+        //Register global middleware here
+        $middleware->append(
+            \App\Http\Middleware\GlobalPOMiddleware::class
         );
     })
     ->withExceptions(function (Exceptions $exceptions): void {
