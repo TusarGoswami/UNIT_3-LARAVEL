@@ -17,8 +17,8 @@ class Invokable123Controller extends Controller
     public function __invoke1(Request $request){
         $users = [
             1 => "Tusar",
-            2 => "Sujan",
-            3 => "Sujan",
+            2 => "Aditya",
+            3 => "Adarsh",
         ];
          $id = $request->id;
 
