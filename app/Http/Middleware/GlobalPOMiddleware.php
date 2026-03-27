@@ -15,10 +15,10 @@ class GlobalPOMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $age = $request -> query('age');
-        if(!$age || $age < 18){
-            return response("Sorry, you are not restricted to access url");
-        }
-        return $next($request);
+        // $age = $request -> query('age');
+        // if(!$age || $age < 18){
+        //     return response("Sorry, you are not restricted to access url");
+        // }
+        // return $next($request);
     }
 }

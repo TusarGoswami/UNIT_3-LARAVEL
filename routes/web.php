@@ -8,6 +8,8 @@ use App\Http\Controllers\APIPOController;
 use App\Http\Controllers\MiddlewarePOController;
 use App\Http\Middleware\MiddlewarePO;
 use App\Http\Middleware\GlobalPOMiddleware;
+use App\Http\Controllers\MYmidController;
+use App\Http\Middleware\CM;
 
 
 Route::get('/', function () {
@@ -22,6 +24,8 @@ Route :: get('/firstpo', [FirstPOController::class, 'Show']);
 //step 4 : make route for controller
 //step 5 : run your url with url provided in route
 //Route :: get('/firstpo', [FirstPOController::class, 'Show']); 
+
+/**************===================================******************/
 
 //Step 1 : Create controler with nay name
 //step 2 : write inside the method of controller, sucess middleware is created
@@ -42,3 +46,6 @@ Route :: resource('/abc', ResourcePOController::class);
 Route :: apiResource('xyz', APIPOController::class);
 // Route :: get('/firstmiddleware', [MiddlewarePOController::class, 'show'])->middleware('checkingage');
 Route :: get('/firstmiddleware', [MiddlewarePOController::class, 'show']);
+
+Route :: get('/dashboard', [MYmidController::class, 'dashboard']);
+Route :: get('/admin', [MYmidController::class, 'admin']);

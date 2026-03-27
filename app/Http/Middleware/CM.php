@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class MiddlewarePO
+class CM
 {
     /**
      * Handle an incoming request.
@@ -15,10 +15,10 @@ class MiddlewarePO
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // $age = $request -> query('age');
-        // if(!$age || $age < 18){
-        //     return response("Sorry, you are not restricted to access url");
-        // }
-        // return $next($request);
+        $age = $request -> query('age');
+        if(!$age || $age < 18){
+            return response("NOT Allowed"); 
+        }
+        return $next($request);
     }
 }
