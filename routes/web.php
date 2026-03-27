@@ -12,6 +12,7 @@ use App\Http\Controllers\MYmidController;
 use App\Http\Middleware\CM;
 
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -37,15 +38,18 @@ Route :: get('/firstpo', [FirstPOController::class, 'Show']);
 //step 8 : add middleware in route in web.php file
 //step 9 : Finally run your url with normal url, then restricted parameter 
 
-Route :: get('/firstpo/display', [FirstPOController::class, 'display']);
+// Route :: get('/firstpo/display', [FirstPOController::class, 'display']);
 
-Route :: get('/courses', [FirstPOController::class, 'Show']);
-Route :: get('/invoking', Invokable123Controller::class);
-Route :: get('/invoking1/{id}', [Invokable123Controller::class, '__invoke1']);
-Route :: resource('/abc', ResourcePOController::class);
-Route :: apiResource('xyz', APIPOController::class);
-// Route :: get('/firstmiddleware', [MiddlewarePOController::class, 'show'])->middleware('checkingage');
-Route :: get('/firstmiddleware', [MiddlewarePOController::class, 'show']);
+// Route :: get('/courses', [FirstPOController::class, 'Show']);
+// Route :: get('/invoking', Invokable123Controller::class);
+// Route :: get('/invoking1/{id}', [Invokable123Controller::class, '__invoke1']);
+// Route :: resource('/abc', ResourcePOController::class);
+// Route :: apiResource('xyz', APIPOController::class);
+// // Route :: get('/firstmiddleware', [MiddlewarePOController::class, 'show'])->middleware('checkingage');
+// Route :: get('/firstmiddleware', [MiddlewarePOController::class, 'show']);
 
-Route :: get('/dashboard', [MYmidController::class, 'dashboard']);
-Route :: get('/admin', [MYmidController::class, 'admin']);
+// Route :: get('/dashboard', [MYmidController::class, 'dashboard']);
+// Route :: get('/admin', [MYmidController::class, 'admin']);
+
+Route :: view('/login', 'MY_loginpage');
+Route :: view('/logout', 'My_logoutpage');

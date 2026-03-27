@@ -22,11 +22,11 @@ return Application::configure(basePath: dirname(__DIR__))
         // ]
         // );
 
-        $middleware->alias(
-        [
-            'agefactor' => \App\Http\Middleware\CM::class,
-        ]
-        );
+        // $middleware->alias(
+        // [
+        //     'agefactor' => \App\Http\Middleware\CM::class,
+        // ]
+        // );
         
         //Register global middleware here
         // $middleware->append(

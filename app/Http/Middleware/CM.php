@@ -19,16 +19,16 @@ class CM
         $country = $request->query('country');
         $user = $request->query('user');
 
-        if (!$age || $age < 18) {
-            return response("NOT Allowed: Age restriction");
-        }
+        // if (!$age || $age < 18) {
+        //     return response("NOT Allowed: Age restriction");
+        // }
 
-        if (!$country || strtolower($country) !== 'india') {
-            return response("NOT Allowed: Only for India");
-        }
-        if(!$user || strtolower($user) !== 'tusar'){
-            return response("NOT Allowed: Only for Tusar");
-        }
+        // if (!$country || strtolower($country) !== 'india') {
+        //     return response("NOT Allowed: Only for India");
+        // }
+        // if(!$user || strtolower($user) !== 'tusar'){
+        //     return response("NOT Allowed: Only for Tusar");
+        // }
 
         return $next($request);
     }
