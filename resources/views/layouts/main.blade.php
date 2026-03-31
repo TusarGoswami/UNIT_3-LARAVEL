@@ -3,19 +3,6 @@
 <head>
     <title>MyAPP</title>
     <style>
-        body {
-            font-family: Arial;
-            margin: 0;
-        }
-        nav {
-            background: #333;
-            padding: 10px;
-        }
-        nav a {
-            color: white;
-            margin-right: 15px;
-            text-decoration: none;
-        }
         footer {
             margin-top: 20px;
             text-align: left;
