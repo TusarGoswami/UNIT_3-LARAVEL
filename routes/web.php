@@ -53,3 +53,16 @@ Route :: get('/firstpo', [FirstPOController::class, 'Show']);
 
 Route :: view('/login', 'MY_loginpage');
 Route :: view('/logout', 'My_logoutpage');
+
+
+Route::get('/admin', function () {
+    return view('admin');
+});
+
+Route::get('/users', function () {
+    return view('users');
+});
+
+Route::get('/group', function () {
+    return view('group');
+});

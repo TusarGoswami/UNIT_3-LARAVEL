@@ -18,4 +18,4 @@
 </body>
 </html>
 
-//Create three views , first is admin, second is user and third is group of user, there on the admin page you have to add your image ,in users you have to add unorderes list of five courses and in third view, group of users, you have to display the name , marks and grade of five stdents and their should be one main layout folder, you have to create myAPP, on myAPP the content will be display in the form of navigation, and for footer you have to include one landscape image, you have to set the width and height there.
+//Create three views , first is admin, second is user and third is group of user, there on the admin page you have to add your image , in users you have to add unorderes list of five courses and in third view, group of users, you have to display the name , marks and grade of five stdents and their should be one main layout folder, you have to create myAPP, on myAPP the content will be display in the form of navigation, and for footer you have to include one landscape image, you have to set the width and height there.
