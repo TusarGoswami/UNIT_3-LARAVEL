@@ -103,3 +103,13 @@ Route :: get('223PO', function(){
     $age = 28;
     return view('practice', compact('age'));
 });
+
+//domain routing 
+Route :: domain('admin/localhost') -> group(function(){
+    Route :: get('/user', function(){
+        return "User found";
+    });
+    Route :: get('/admin', function(){
+        return "admin found";
+    });
+});
