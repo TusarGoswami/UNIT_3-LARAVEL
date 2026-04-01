@@ -88,3 +88,18 @@ Route :: controller (MyDemoController::class) -> group(function(){
 
 // Route :: get('/details/{id}', 'details') -> whereAlpha('id'); // id me sirf alphabet hone chahiye, koi digit ya special character nahi hona chahiye.
 // });
+
+//PHP output
+// Route :: get('/223PO', function(){
+//     $name = "Tusar";
+//     $age = 21;
+//     var_dump($name);
+//     var_dump($age);
+//     // echo "My name is : $name <br>";
+// });
+
+//blade template
+Route :: get('223PO', function(){
+    $age = 28;
+    return view('practice', compact('age'));
+});
