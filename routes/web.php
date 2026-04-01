@@ -10,6 +10,7 @@ use App\Http\Middleware\MiddlewarePO;
 use App\Http\Middleware\GlobalPOMiddleware;
 use App\Http\Controllers\MYmidController;
 use App\Http\Middleware\CM;
+use App\Http\Controllers\MyDemoController;
 
 
 
@@ -66,3 +67,24 @@ Route::get('/users', function () {
 Route::get('/group', function () {
     return view('group');
 });
+
+//Group Routing with prefix 
+// Route :: prefix('223PO') -> controller(MyDemoController::class) -> group(function(){
+//     Route :: get('/display', 'display');
+//     Route :: get('/details/{id}', 'details');
+// });
+
+//Group routing without prefix
+Route :: controller (MyDemoController::class) -> group(function(){
+    Route :: get('/display', 'display');
+    Route :: get('/details/{id}', 'details');
+    Route :: get('/info/{id}', 'info');
+});
+
+//adding constraints 
+// Route :: controller (MyDemoController::class) -> group(function(){
+// Route :: get('/display','display');
+// Route :: get('/details/{id}', 'details') -> where('id', '[0-9]{5,7}'); // id length 5 to 7 digits kaa hona chai, aur sirf digits hone chahiye, koi alphabet ya special character nahi hona chahiye.
+
+// Route :: get('/details/{id}', 'details') -> whereAlpha('id'); // id me sirf alphabet hone chahiye, koi digit ya special character nahi hona chahiye.
+// });
