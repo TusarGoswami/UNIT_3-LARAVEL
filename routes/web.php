@@ -136,3 +136,8 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+//Current Url generation
+Route :: get('/', function(){
+    return view('coding');
+});
