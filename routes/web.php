@@ -112,4 +112,4 @@ Route :: domain('admin/localhost') -> group(function(){
     Route :: get('/admin', function(){
         return "admin found";
     });
-});
+}); 
