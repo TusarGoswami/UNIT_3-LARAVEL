@@ -106,10 +106,19 @@ Route :: get('223PO', function(){
 
 //domain routing 
 Route :: domain('admin/localhost') -> group(function(){
-    Route :: get('/user', function(){
-        return "User found";
-    });
-    Route :: get('/admin', function(){
+    Route :: get('/uvw', function(){
         return "admin found";
     });
+    Route :: get('/qrs', function(){
+        return "User found";
+    });
 }); 
+//run your url via
+//https://admin.localhost:8000/uvw
+//https://admin.localhost:8000/qrs
+
+
+Route :: get('/', function(){
+    return view('mypractice');
+});
+Route :: get('/display/mydisplay/abc/cdr/ref', [MyDemoController::class, 'mydisplay'])-> name('myinfo'); 
