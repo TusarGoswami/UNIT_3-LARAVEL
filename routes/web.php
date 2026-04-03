@@ -122,3 +122,17 @@ Route :: get('/', function(){
     return view('mypractice');
 });
 Route :: get('/display/mydisplay/abc/cdr/ref', [MyDemoController::class, 'mydisplay'])-> name('myinfo'); 
+
+
+
+Route::get('/home', function () {
+    return view('home');
+});
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
